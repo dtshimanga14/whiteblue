@@ -1,11 +1,12 @@
 import Post from "./Post";
 
-const feeds = [
+
+
+const Feed = () => {
+  const feeds = [
     { src : "./pics/black-family.jpg"},
     { src : "./pics/hawai.webp"},
   ];
-
-const Feed = () => {
   return (
     <div>
       {feeds.map((feed) => (<Post d ={feed}/>))}
