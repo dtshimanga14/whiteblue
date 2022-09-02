@@ -23,8 +23,20 @@ const resolvers = {
       return feeds;
     },
     friends : async () => {
-    const friends = await users.find({}).toArray();
-    return friends;
+      const friends = await users.find({}).toArray();
+      return friends;
+    },
+    chats : async() => {
+      return {
+        firstOwner : "daniel tshims",
+        secondOwner : "Rudyger",
+        messages : [{
+          id : "365758",
+          digitalSign : "47585",
+          when : "say something",
+          text : "hello world",
+        }]
+      };
     }
   }
 };

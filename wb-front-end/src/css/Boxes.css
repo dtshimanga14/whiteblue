@@ -2,7 +2,6 @@
     display: flex;
 	justify-content: flex-end;
 	flex-wrap: nowrap;
-	overflow-x: auto;
 	z-index: 900;
 	position: fixed;
 	right: 11%;

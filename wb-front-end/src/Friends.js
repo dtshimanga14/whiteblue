@@ -4,10 +4,11 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import Loading from "./Loading";
+import Friend from "./Friend";
 
 import { GET_FRIENDS } from "./queries/friends";
 
-const Friends = () => {
+const Friends = ({ popUpChatBox }) => {
     const {loading, error, data } = useQuery(GET_FRIENDS);
   
     if(loading) return (<Loading />);
@@ -15,7 +16,12 @@ const Friends = () => {
     let { friends } = data;
   return (
     <div className ="Friends">
-      {friends.map(friend => <div>{friend.username}</div>)}
+      {friends.map(friend => 
+        (<Friend 
+            user={friend} 
+            popUpChatBox={popUpChatBox}
+        />)
+      )}
     </div>
   );
 };
