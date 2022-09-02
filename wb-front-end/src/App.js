@@ -5,9 +5,9 @@ import Feed from "./Feed";
 import Head from "./Head";
 import Friends from "./Friends";
 import Menu from "./Menu";
+import Boxes from "./Boxes";
 
-
-
+const chats = [{ name : "daniel"}, { name : "kassampu"}];
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
       <Friends/>
       <Menu />
       <Feed/>
+      <Boxes chats={chats} />
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.Boxes {
+    display: flex;
+	justify-content: flex-end;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+	z-index: 900;
+	position: fixed;
+	right: 11%;
+	bottom: 0.5%;
+	width :44%;
+	height: 47%;
+    background-color: brown;
+}

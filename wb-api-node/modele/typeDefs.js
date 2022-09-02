@@ -14,6 +14,7 @@ const typeDefs = gql`
   type Query {
     users : User
     feeds : [Feed]
+    friends : [User]
   }
 `;
 exports.typeDefs = typeDefs;

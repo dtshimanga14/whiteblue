@@ -4,9 +4,8 @@
 
 .App-grid {
   display: grid;
-  width: 100%;
-  grid-template-areas: "Head Head Head Head Head Head Head Head"
-                       "Menu Menu Feed Feed Feed . Friends Friends"
-                       "Menu Menu Feed Feed Feed . Friends Friends";
+  grid-template-areas: "Head Head Head Head Head Head "
+                       "Menu Menu Feed Feed  Friends Friends"
+                       "Menu Menu Feed Feed  Friends Friends";
 }
 

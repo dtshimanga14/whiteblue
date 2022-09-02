@@ -7,11 +7,6 @@ import Loading from "./Loading";
 import { GET_FEEDS } from "./queries/feeds";
 
 const Feed = () => {
-  // const feeds = [
-  //   { src : "./pics/black-family.jpg"},
-  //   { src : "./pics/hawai.webp"},
-  // ];
-
   const {loading, error, data } = useQuery(GET_FEEDS);
 
   if(loading) return (<Loading />);
