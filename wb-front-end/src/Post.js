@@ -2,7 +2,7 @@ import "./css/Post.css";
 
 const Post = ({ d }) => {
     return (
-      <div>
+      <div className="Post">
         <img 
           className = "" src={d.src}
           alt="here must be an"

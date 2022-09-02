@@ -14,6 +14,13 @@ const resolvers = {
         const users = database.collection('users');
         const user = await users.findOne();
         return user;
+      },
+      feeds : () => {
+        const feeds = [
+            { src : "./pics/black-family.jpg"},
+            { src : "./pics/hawai.webp"},
+          ];
+        return feeds;
       }
     }
   };

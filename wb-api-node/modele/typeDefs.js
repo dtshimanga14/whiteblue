@@ -8,8 +8,12 @@ const typeDefs = gql`
     age : Int
     email : String
   }
+  type Feed {
+    src : String
+  }
   type Query {
     users : User
+    feeds : [Feed]
   }
 `;
 exports.typeDefs = typeDefs;

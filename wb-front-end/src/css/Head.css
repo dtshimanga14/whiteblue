@@ -1,0 +1,6 @@
+
+.Head {
+    grid-area: Head;
+    background-color: #8ca0ff;
+    height: 50px;
+}
