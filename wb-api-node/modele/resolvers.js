@@ -28,6 +28,7 @@ const resolvers = {
     },
     chats : async() => {
       return {
+        _id : "1",
         firstOwner : "daniel tshims",
         secondOwner : "Rudyger",
         messages : [{

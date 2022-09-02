@@ -59,7 +59,7 @@
 }
 .icon-right-chat{
 	position : relative;
-	left : 70%;
+	left : 65%;
 	display: inline;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -68,7 +68,7 @@
   /*background-image: url('/css/searchicon.png');  Add a search icon to input */
   background-position: 5px 5px; /* Position the search icon */
   background-repeat: no-repeat; /* Do not repeat the icon image */
-  width: 100%; /* Full-width */
+  width: 95%; /* Full-width */
   height : 100%;
   border: 2px solid #ddd; /* Add a grey border */
 }

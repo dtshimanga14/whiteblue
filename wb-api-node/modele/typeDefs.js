@@ -22,6 +22,7 @@ const typeDefs = gql`
     text : String
   }
   type Chat {
+    _id : String
     firstOwner : String
     secondOwner : String
     messages : [Message]

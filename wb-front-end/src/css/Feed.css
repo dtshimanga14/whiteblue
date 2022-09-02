@@ -1,5 +1,9 @@
 
 .Feed {
     grid-area : Feed;
+    position: absolute;
+    top : 12%;
+    width : 40%;
+    left : 20%;
     background-color: #222327;
 }

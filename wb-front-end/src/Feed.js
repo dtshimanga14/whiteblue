@@ -3,10 +3,12 @@ import React from 'react';
 import { useQuery } from '@apollo/client';
 
 import Post from "./Post";
+import Trick from "./Trick";
 import Loading from "./Loading";
+
 import { GET_FEEDS } from "./queries/feeds";
 
-const Feed = () => {
+const Feed = ({ setPosterToggle }) => {
   const {loading, error, data } = useQuery(GET_FEEDS);
 
   if(loading) return (<Loading />);
@@ -14,6 +16,7 @@ const Feed = () => {
   let { feeds } = data;
   return (
     <div className="Feed">
+      <Trick togglePosterProps={()=> setPosterToggle()} />
       {feeds.map((feed) => (<Post d ={feed}/>))}
     </div>
   );

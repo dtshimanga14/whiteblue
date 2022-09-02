@@ -25,7 +25,7 @@ const ChatBox = ({ messages, firstOwner, secondOwner }) => {
   };
 
 const Box = ({onClose, chat}) => {
-  const _id = "1243";
+  const _id = "1";
   let firstOwner = "1243";
   let secondOwner = _id;
   
@@ -61,7 +61,7 @@ const Box = ({onClose, chat}) => {
         <span className="cursor-image">
             <i className="fa fa-minus"/>
         </span >
-        <span   className="cursor-image" onClick={()=> onClose(_id)}> 
+        <span   className="cursor-image" onClick={() => onClose()}> 
             <i className="fa fa-times"/>
         </span >
       </div>
