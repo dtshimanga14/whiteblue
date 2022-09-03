@@ -4,6 +4,7 @@ import { useQuery } from '@apollo/client';
 
 import Post from "./Post";
 import Trick from "./Trick";
+import Suggested from "./Suggested";
 import Loading from "./Loading";
 
 import { GET_FEEDS } from "./queries/feeds";
@@ -16,6 +17,7 @@ const Feed = ({ setPosterToggle }) => {
   let { feeds } = data;
   return (
     <div className="Feed">
+      <Suggested />
       <Trick togglePosterProps={()=> setPosterToggle()} />
       {feeds.map((feed) => (<Post d ={feed}/>))}
     </div>

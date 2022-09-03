@@ -146,7 +146,7 @@ const Poster = ({ setPosterToggle }) => {
 				<div className="wit-flex-box">
 				{urlUploaded ? 
 					(<div className="pre-viewing-image" id="pre-viewing-image-id">
-						<img className="pre-viewing-image" src={urlUploaded}/>
+						<img className="post-image" src={urlUploaded}/>
 					</div>):
 					(<div className="pre-viewing-image" id="pre-viewing-image-id">
 						Please Select an Image...

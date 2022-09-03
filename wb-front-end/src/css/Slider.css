@@ -1,0 +1,19 @@
+.nextArrow {
+    position: absolute;
+    top: 40%;
+    right: 10px;
+    z-index: 100;
+    color: #fff;
+  }
+  
+  .backArrow {
+    position: absolute;
+    top: 40%;
+    left: 10px;
+    z-index: 100;
+    color: #fff;
+  }
+  
+  .fa-arrow-right:before, .fa-arrow-left:before {
+    color: #222
+  }

@@ -5,3 +5,8 @@
 	width : 40%;
 	z-index : 2001;
 }
+.post-image {
+	margin-bottom : 10px;
+	height : 60%;
+	width : 100%;
+  }
