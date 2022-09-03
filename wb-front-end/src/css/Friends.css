@@ -5,3 +5,25 @@
 	top : 12%;
     right : 1%;
 }
+.size-friends {
+	background-color : white;
+	border-bottom : 2px solid black transparent;
+	border-radius : 5px;
+	width : 19%;
+	float : right;
+	position : fixed;
+	overflow-y: auto;
+	left : 80.7%;
+	z-index : 500;
+	top : 11%;
+	padding : 1%;   
+	padding-top : 1.5%;
+	padding-bottom : 1.5%;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2),0 3px 10px 0 rgba(0,0,0,0.19);
+}
+.image-friend {
+	height : 30px;
+	width :  30px;
+	border-radius: 50%;
+	border: 2px solid #ddd;
+}

@@ -1,6 +1,7 @@
 import './css/App.css';
 
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch,Route,Redirect } from 'react-router-dom';
 
 import Feed from "./Feed";
 import Head from "./Head";
@@ -36,7 +37,7 @@ function App() {
       <Head />
       <Friends popUpChatBox = {popUpChatBox}/>
       <Menu />
-      <Feed/>
+      <Feed setPosterToggle={() => setPosterToggle(!posterToggle)}/>
       <Boxes chats={chats} onClose={onClose}/>
     </div>
   );

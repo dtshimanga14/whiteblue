@@ -1,9 +1,11 @@
 import React from 'react';
 import * as ReactDOM from 'react-dom/client';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+import { BrowserRouter, Route,Routes, Redirect } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
+import Material from "./Material";
 import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
@@ -14,7 +16,9 @@ const client = new ApolloClient({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ApolloProvider client={client}>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </ApolloProvider>
 );
 

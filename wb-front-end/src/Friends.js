@@ -16,12 +16,14 @@ const Friends = ({ popUpChatBox }) => {
     let { friends } = data;
   return (
     <div className ="Friends">
+      <div  className= "inner-friends">
       {friends.map(friend => 
         (<Friend 
             user={friend} 
             popUpChatBox={popUpChatBox}
         />)
       )}
+      </div>
     </div>
   );
 };

@@ -1,4 +1,7 @@
 
 .Menu {
     grid-area : Menu;
+    position: absolute;
+    left : 1%;
+    top : 10%;
 }
