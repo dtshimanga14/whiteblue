@@ -37,9 +37,12 @@ const Poster = ({ setPosterToggle }) => {
     const submit = (event) => {
         event.preventDefault();
         const fileField = document.getElementById('labeling-link');
+        const description = document.getElementById("wit-core").innerText
+            ||document.getElementById("wit-core").textContent;
         const formData = new FormData();
         formData.append('file', fileField.files[0]);
-        let linkApi = 'http://localhost:8000/upload/'+id;
+        formData.append('description', description);
+        let linkApi = 'http://localhost:8000/addPicture';
         fetch(linkApi,{
             method : 'post',
             body: formData,

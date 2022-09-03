@@ -14,12 +14,12 @@ const Feed = ({ setPosterToggle }) => {
 
   if(loading) return (<Loading />);
   if(error) return `Error ${error.message}`;
-  let { feeds } = data;
+  let { posts } = data;
   return (
     <div className="Feed">
       <Suggested />
       <Trick togglePosterProps={()=> setPosterToggle()} />
-      {feeds.map((feed) => (<Post d ={feed}/>))}
+      {posts.map((post) => (<Post d ={post}/>))}
     </div>
   );
 };

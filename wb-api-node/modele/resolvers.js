@@ -1,8 +1,5 @@
 
-const{ mongodb,MongoClient, ObjectId} = require("mongodb");
-const { GridFsStorage } = require("multer-gridfs-storage");
-const Grid = require('gridfs-stream');
-const mongoose = require("mongoose");
+const{ MongoClient, ObjectId} = require("mongodb");
 
 const mongoURI = "mongodb+srv://root:2YKasj80X1oJHFSV@wb-db.dongv5t.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(mongoURI);
@@ -38,6 +35,11 @@ const resolvers = {
           text : "hello world",
         }]
       };
+    },
+    posts : async() => {
+      const posts = database.collection('posts');
+      const data = await posts.find({}).toArray();
+      return data;
     }
   }
 };

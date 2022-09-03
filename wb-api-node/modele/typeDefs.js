@@ -27,11 +27,17 @@ const typeDefs = gql`
     secondOwner : String
     messages : [Message]
   }
+  type Post {
+    _id : String
+    description : String
+    filename : String
+  }
   type Query {
     users : User
     feeds : [Feed]
     friends : [User]
     chats : Chat
+    posts : [Post]
   }
 `;
 exports.typeDefs = typeDefs;

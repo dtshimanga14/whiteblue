@@ -32,20 +32,25 @@ const Menu = () => {
 				<span className="text-button">Assignments</span>
 			</button>
 		</Link>
-				<Link to="/myclass">
-					<button className="btn menu-btn-size">
-						<span className="icon-position">
-							<i className="fa fa-group"/>
-						</span>
-						<span className="text-button">My Collegues</span>
-					</button>
-				</Link>
-        <Link to="/histories">
+		<Link to="/myclass">
+			<button className="btn menu-btn-size">
+				<span className="icon-position">
+					<i className="fa fa-group"/>
+				</span>
+				<span className="text-button">My Collegues</span>
+			</button>
+		</Link>
+        <Link to="/transcript">
 			<button className="btn menu-btn-size">
 				<span className="icon-position">
 					<i className="fa "/>
 				</span>
 				<span className="text-button">Transcripts</span>
+			</button>
+		</Link>
+		<Link to="/resume">
+			<button className="btn menu-btn-size">
+				<span className="text-button">Resume</span>
 			</button>
 		</Link>
 		<Link to="/histories">
@@ -56,7 +61,7 @@ const Menu = () => {
 				<span className="text-button">Activities</span>
 			</button>
 		</Link>
-		<Link to="/billing">
+		<Link to="/payment">
 			<button className="btn menu-btn-size">
 				<span className="icon-position">
 					<i className="fa fa-money"/>
@@ -77,10 +82,10 @@ const Menu = () => {
 				<span className="icon-position">
 					<i className="fa fa-file-text"/>
 				</span>
-				<span className="text-button">Writor</span>
+				<span className="text-button">Editor</span>
 			</button>
 		</Link>
-		<Link to="/tags">
+		<Link to="/bookmarked">
 			<button className="btn menu-btn-size">
 				<span className="icon-position">
 					<i className="fa fa-bookmark"/>

@@ -40,9 +40,10 @@ const Post = ({ d }) => {
 				<span  className="ellipsis-post" onClick={()=> setmenuSetting(!menuSetting)}>
 					<i className="fa fa-ellipsis-h"/>
 				</span>
-			</div>
+			  </div>
+        <div>{d.description}</div>
         <img 
-          className = "post-image" src={d.src}
+          className = "post-image" src={`http://localhost:8000/image/${d.filename}`}
           alt="here must be an"
         />
         <div  className = "post-feeling-frame">
