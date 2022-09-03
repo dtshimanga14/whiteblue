@@ -1,7 +1,6 @@
 import './css/App.css';
 
 import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
 
 import Feed from "./Feed";
 import Head from "./Head";
@@ -9,9 +8,8 @@ import Friends from "./Friends";
 import Menu from "./Menu";
 import Boxes from "./Boxes";
 import Poster from "./Poster";
-import Material from './Material';
 
-function App() {
+function Main () {
 
   const [chats,setChats] = useState([]);
   const [posterToggle, setPosterToggle] = useState(false);
@@ -30,19 +28,19 @@ function App() {
   };
 
   return (
-    <> 
-      <div className="App-grid">
-        {posterToggle ? 
-          (<Poster 
-              setPosterToggle={() => setPosterToggle(!posterToggle)}
-          />) : null}
-        <Head />
-        <Friends popUpChatBox = {popUpChatBox}/>
-        <Menu />
-        <Feed setPosterToggle={() => setPosterToggle(!posterToggle)}/>
-        <Boxes chats={chats} onClose={onClose}/>
-      </div>
-    </>
+    <div className="App-grid">
+      {posterToggle ? 
+				(<Poster 
+            setPosterToggle={() => setPosterToggle(!posterToggle)}
+        />) : null}
+      <Head />
+      <Friends popUpChatBox = {popUpChatBox}/>
+      <Menu />
+      <Feed setPosterToggle={() => setPosterToggle(!posterToggle)}/>
+      <Boxes chats={chats} onClose={onClose}/>
+      <div>
+    </div>
+    </div>
   );
 }
-export default App;
+export default Main;

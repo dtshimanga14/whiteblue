@@ -18,6 +18,9 @@ root.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
       <App />
+      <Routes >
+        <Route path="/materials" component={Material} />
+      </Routes>
     </BrowserRouter>
   </ApolloProvider>
 );
