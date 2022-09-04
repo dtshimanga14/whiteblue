@@ -102,15 +102,6 @@ app.post("/addPicture", upload.single("file"),async (req, res, err) => {
       gfs.openDownloadStreamByName(req.params.filename).pipe(res);
     });
 })
-.get("/users",async (req,res) => {
-    res.send("hello world");
-}).get("/feeds",() => {
-    const feeds = [
-      { src : "./pics/black-family.jpg"},
-      { src : "./pics/hawai.webp"},
-    ];
-    res.json(feeds);
-})
 .listen(process.env.PORT,()=> {
     console.log("wb-node-apis is running on 9000");
 });

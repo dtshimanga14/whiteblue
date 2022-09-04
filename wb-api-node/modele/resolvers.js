@@ -24,6 +24,7 @@ const resolvers = {
       return friends;
     },
     chats : async() => {
+      const chats = database.collection('chats');
       return {
         _id : "1",
         firstOwner : "daniel tshims",

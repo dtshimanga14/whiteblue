@@ -11,6 +11,8 @@ import Payment from "./Payment";
 import Editor from "./Editor";
 import Bookmarked from "./Bookmarked";
 import Resume from "./Resume";
+import SignUp from "./SignUp";
+import Wb from "./Wb";
 import reportWebVitals from './reportWebVitals';
 
 const client = new ApolloClient({
@@ -23,7 +25,9 @@ root.render(
   <ApolloProvider client={client}>
     <BrowserRouter>
     <Routes>
-      <Route  path="/" exact element ={<App />} />
+      <Route  path="/" exact element ={<Wb />} />
+      <Route  path="/home" exact element ={<App />} />
+      <Route  path="/signup" exact element ={<SignUp />} />
       <Route path="/materials" element={<Material />} />
       <Route path="/transcript" element={<Transcript />} />
       <Route path="/payment" element={<Payment />} />
