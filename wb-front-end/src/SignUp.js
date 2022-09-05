@@ -2,11 +2,11 @@ import "./css/SignUp.css";
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 
-const logInUrl = `${process.env.REACT_APP_SERVER_URL}users/signup`;
+const logInUrl = `${process.env.MANAGEMENT_SERVER_URL}createUser`;
 
 const signup = (user) => {
 
-  fetch(logInUrl, { 
+  fetch("http://localhost:8081/createUser", { 
     mode: 'cors',
     method : "POST",
     headers: {
@@ -19,28 +19,35 @@ const signup = (user) => {
 
 
 const SignUp = () => {
-  
-  const [username,setUserName] = useState("");
-  const [name,setName] = useState("");
+
+  const [lastname,setLastName] = useState("");
+  const [middlename,setMiddleName] = useState("");
+  const [firstname,setFirstName] = useState("");
   const [email,setEmail] = useState("");
-  const [university,setUniversity] = useState("");
-  const [password,setPwd] = useState("");
+  const [password,setPassword] = useState("");
 
   return(
     <div className="sign-up-form">
       <form>
         <p>
-          <label className = "input-label-sign-up">Name </label>
-          <input type = "text"  name = "name" 
-             className ="form-control-sign-up" onChange = { ({ target }) => setName(target.value) }
-             required 
+          <label className = "input-label-sign-up">Firstname </label> 
+          <input type = "text"  name = "firstname" 
+            className ="form-control-sign-up" onChange = {({ target }) => setFirstName(target.value)}
+            required
           />
         </p>
         <p>
-          <label className = "input-label-sign-up">Username </label> 
-          <input type = "text"  name = "username" 
-            className ="form-control-sign-up" onChange = { ({ target }) => setUserName(target.value) }
+          <label className = "input-label-sign-up">Middlename </label> 
+          <input type = "text"  name = "middlename" 
+            className ="form-control-sign-up" onChange = {({ target }) => setMiddleName(target.value)}
             required
+          />
+        </p>
+        <p>
+          <label className = "input-label-sign-up">Lastname </label>
+          <input type = "text"  name = "lastname" 
+             className ="form-control-sign-up" onChange = {({ target }) => setLastName(target.value)}
+             required 
           />
         </p>
         <p>
@@ -51,15 +58,15 @@ const SignUp = () => {
         </p>
         <p>
           <label className = "input-label-sign-up">Password </label> 
-          <input type = "text"  name = "university"  className ="form-control-sign-up" 
-            onChange = { ({ target }) => setUniversity(target.value) }
+          <input type = "text"  name = "password"  className ="form-control-sign-up" 
+            onChange = { ({ target }) => setPassword(target.value) }
             required
           />
         </p>
        <p> 
        <label className = "input-label-sign-up">confirm password</label> 
        <input type = "password"  name = "password" className ="form-control-sign-up"
-          onChange = { ({ target }) => setPwd(target.value) }
+          onChange = { ({ target }) => setPassword(target.value) }
           required
         />
        </p>
@@ -83,8 +90,9 @@ const SignUp = () => {
             className ="button-submit-sign-up"
             onClick = {() => 
               signup({ 
-                name , username ,
-                password , email , university 
+                lastname, firstname,
+                middlename, password,
+                email
             })}
           />  
         </Link>

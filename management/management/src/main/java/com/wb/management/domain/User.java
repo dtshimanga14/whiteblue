@@ -13,12 +13,16 @@ public class User {
     private String lastname;
     private String firstname;
     private String middlename;
-
+    private String email;
+    private String password;
     public User() { }
-    public User(String lastname, String firstname, String middlename) {
+
+    public User(String lastname, String firstname, String middlename, String email, String password) {
         this.lastname = lastname;
         this.firstname = firstname;
         this.middlename = middlename;
+        this.email = email;
+        this.password = password;
     }
 
     public String getLastname() {
@@ -44,7 +48,21 @@ public class User {
     public void setMiddlename(String middlename) {
         this.middlename = middlename;
     }
+    public String getPassword() {
+        return password;
+    }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
     @Override
     public String toString() {
         return "User{" +
@@ -52,8 +70,11 @@ public class User {
                 ", lastname='" + lastname + '\'' +
                 ", firstname='" + firstname + '\'' +
                 ", middlename='" + middlename + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
                 '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
