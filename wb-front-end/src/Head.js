@@ -1,8 +1,9 @@
 import './css/Head.css';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Head = (props) => {
   const {avatar, middlename, username} = props;
+  const navigate = useNavigate();
   return (
     <div className="Head">
       <img className="profil" 
@@ -15,13 +16,17 @@ const Head = (props) => {
       <div className="button-set">
           <ol className="listnav">
             <button className="btn btn-bottom-border" >
-              <i class="fa-solid fa-school-flag"></i>
+              <i className="fa-solid fa-school-flag"/>
             </button>
             <button className="btn bell-btn btn-bottom-border" >
-              <i class="fa-solid fa-bell" />
+              <i className="fa-solid fa-bell" />
             </button>
             <Link to="/">
-              <button className="btn bell-btn btn-bottom-border" >
+              <button className="btn bell-btn btn-bottom-border" 
+                onClick={()=> {
+                  localStorage.removeItem("auth-token");
+                  navigate(`/`);
+                }}>
                 <span className="bell-layer">logout</span>
               </button>
             </Link>

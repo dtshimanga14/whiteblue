@@ -50,7 +50,7 @@ const Post = ({ d }) => {
           <button className="btn" >
             <i className="fa fa-thumbs-up"/><span className="text-button">I like</span>
           </button>
-          <button className="btn" >
+          <button className="btn" onClick={()=> document.getElementById(d._id).focus() }>
             <i className="fa fa-comments-o"/><span className="text-button">comment</span>
           </button>
           {true ? 
@@ -58,14 +58,14 @@ const Post = ({ d }) => {
             <i className="fa fa-share"/><span className="text-button">share</span>
           </button>):null}
 			 </div><hr/>
-       <div className="comment-space">
-				<div className="poster-comment-image">
-					<img className = "picture-owner-post" src={`http://localhost:8000/image/${users.avatar}`}/>
-				</div>
+       <div className="comment-space">  
 				<form className="post-form">
-					<input value={comment} id=""
+          <div className="poster-comment-image">
+            <img className = "picture-owner-post" src={`http://localhost:8000/image/${users.avatar}`}/>
+          </div>
+					<input value={comment} id={d._id}
 						onChange={({ target }) => setComment(target.value)}  
-						className="post-input"
+						className="comment-input"
 					/>
 				</form>
 			</div>

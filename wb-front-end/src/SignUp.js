@@ -6,7 +6,7 @@ const logInUrl = `${process.env.MANAGEMENT_SERVER_URL}createUser`;
 
 const signup = (user) => {
 
-  fetch("http://localhost:8081/createUser", { 
+  fetch(logInUrl, { 
     mode: 'cors',
     method : "POST",
     headers: {

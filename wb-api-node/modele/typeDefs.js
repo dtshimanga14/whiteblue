@@ -32,12 +32,18 @@ const typeDefs = gql`
     description : String
     filename : String
   }
+  type Token {
+    token : String
+  }
   type Query {
     users : User
     feeds : [Feed]
     friends : [User]
     chats : Chat
     posts : [Post]
+  }
+  type Mutation {
+    login (username: String!, password: String!) : Token
   }
 `;
 exports.typeDefs = typeDefs;

@@ -8,7 +8,6 @@ import java.util.Objects;
 @Entity
 public class User {
     @Id
-    @GeneratedValue
     private int id;
     private String lastname;
     private String firstname;
@@ -17,12 +16,13 @@ public class User {
     private String password;
     public User() { }
 
-    public User(String lastname, String firstname, String middlename, String email, String password) {
+    public User(int id, String lastname, String firstname, String middlename, String email, String password) {
         this.lastname = lastname;
         this.firstname = firstname;
         this.middlename = middlename;
         this.email = email;
         this.password = password;
+        this.id = id;
     }
 
     public String getLastname() {

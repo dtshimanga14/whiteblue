@@ -42,6 +42,12 @@ const resolvers = {
       const data = await posts.find({}).toArray();
       return data;
     }
+  },
+  Mutation : {
+    login : (root,{ username, password }) => {
+      console.log(username);
+      return { token : username == "dan" ? "auth-token" : null };
+    }
   }
 };
 exports.resolvers = resolvers;

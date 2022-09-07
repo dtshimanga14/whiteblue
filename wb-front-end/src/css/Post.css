@@ -12,8 +12,23 @@
   height : 60%;
   width : 100%;
 }
+.comment-input {
+	position: relative;
+	left : 15%;
+	width : 83%;
+	font-size : 1em;
+	border-bottom-right-radius : 30px 30px;
+	border-bottom-left-radius : 30px 30px;
+	border-top-right-radius : 30px 30px;
+	border-top-left-radius : 30px 30px;
+	height : 15px;
+	padding: 2.5%;
+	margin-bottom :4%;
+	display: inline-block;
+	margin-right :4%;
+    font-family: 'Indie Flower', cursive;
+}
 .comment-space {
-  position : relative;
 	width : 90%;
 	margin-top : 0.5%;
 	margin-left : 4%;
@@ -21,14 +36,46 @@
 .poster-comment-image {
 	display : inline-block;
 	margin-right : 2%;
+	border-radius: 50%;
 }
 .post-picture-owner {
 	margin-bottom : 10px;
 	height : 60%;
 	width : 100%;
+	border: 2px solid #ddd;
 }
-.post-form {
+.flex-box-row {
+	display : flex;
+	flex-direction : row;
+	padding : 2.5%;
+}
+.picture-owner-post{
+	height : 30px;
+	width : 30px;
+	border-radius: 50%;
+	border: 2px solid #ddd;
+	margin : 2%;
+}
+.picture-comment{
+	height : 40%;
+	width : 100%;
+	border-radius: 50%;
+	border: 2px solid #ddd;
+	margin : 2%;
+}
+.ellipsis-post{
 	position : relative;
-	width : 80%;
-	height : 45px;
+	left : 40%;
+	cursor : pointer;
+}
+.date-time-hour{
+	color : gray;
+	font-family : 'Barlow-Thin';
+	font-weight : ligher;
+	
+}
+.post-owner{
+	margin-bottom : 3%;
+	font-family : 'Abel-Regular';
+	font-weight : bold;
 }
