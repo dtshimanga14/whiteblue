@@ -5,8 +5,10 @@ const typeDefs = gql`
   type User {
     _id : String
     username : String
+    lastname : String
     firstname : String
     middlename : String
+    password : String
     isConnected : Boolean
     lastSeenOnline : String
     age : Int
@@ -37,6 +39,7 @@ const typeDefs = gql`
   }
   type Query {
     users : User
+    user(username: String!, password: String!) : User
     feeds : [Feed]
     friends : [User]
     chats : Chat

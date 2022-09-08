@@ -25,6 +25,8 @@ const client = new MongoClient(mongoURI);
 
 const { resolvers } = require("./modele/resolvers");
 const { typeDefs } = require("./modele/typeDefs");
+const { AuthApi } = require("./modele/AuthApi");
+const {  ApolloServerPluginLandingPageLocalDefault } = require("apollo-server-core");
 
 var app = express();
 const prepare = (o) => {
@@ -79,7 +81,6 @@ conn.once("open", () => {
 //Rest APIs
 app.use(express.static('static'));
 app.post("/addPicture", upload.single("file"),async (req, res, err) => {
-   
   await client.connect();
   // Establish and verify connection
   const database = await client.db("whiteblue");
@@ -109,7 +110,19 @@ app.post("/addPicture", upload.single("file"),async (req, res, err) => {
 //GRAPHQL APIs
 const start = async () => {
   try {
-    const server = new ApolloServer({ typeDefs, resolvers });
+    const server = new ApolloServer({ 
+      typeDefs, resolvers,
+      csrfPrevention: true,
+      cache: "bounded",
+      plugins: [
+        ApolloServerPluginLandingPageLocalDefault({ embed: true }),
+      ],
+      dataSources : () => {
+        return {
+          authApi : new AuthApi()
+        } 
+      } 
+    });
     await server.start();
     server.applyMiddleware({ app, path: '/graphql' });
     const httpServer = createServer(app);

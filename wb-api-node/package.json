@@ -9,7 +9,9 @@
   "author": "Daniel Kassampu Tshimanga",
   "license": "ISC",
   "dependencies": {
+    "apollo-datasource-rest": "^3.7.0",
     "apollo-server": "^3.10.2",
+    "apollo-server-core": "^3.10.2",
     "apollo-server-express": "^3.10.2",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.2",
