@@ -47,8 +47,11 @@ const resolvers = {
     }
   },
   Mutation : {
-    login : (root,{ username, password }) => {
-      return { token : username == "dan" ? "auth-token" : null };
+    login : async (root,{ username, password },{ dataSources }) => {
+      // let username = "gosling"; let password = "j4m35";
+      const user = await dataSources.authApi.getUser(username, password);
+      let token = "auth-token";
+      return { token };
     }
   }
 };
